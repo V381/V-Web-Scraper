@@ -56,3 +56,8 @@ body {
   button:hover {
     cursor: pointer;
   }
+
+  .items > * {
+    width: 100%;
+    display: block;
+  }
