@@ -36,6 +36,7 @@ app.post("/data-to-scrape", (req, res) => {
               break;
             case "a":
               const linkUrl = $(element).attr("href");
+              links(linkUrl);
               break;
             case "h1":
             case "h2":
@@ -48,9 +49,13 @@ app.post("/data-to-scrape", (req, res) => {
               break;
             case "p":
               const paragraphText = $(element).text();
+              paragraph(paragraphText, index);
               break;
+            case "li":
+              const li = $(element).text();
+              list(li);
+            break;
             default:
-              // Handle unsupported elements or provide a fallback
               break;
           }
         });
@@ -58,6 +63,18 @@ app.post("/data-to-scrape", (req, res) => {
       .catch((error) => {
         console.error(error);
       });
+
+    function paragraph(p, index) {
+        io.emit("pDownloaded", {p: p, index});
+    }
+
+    function list(li, index) {
+        io.emit("liDownloaded", {li: li, index})
+    }
+
+    function links(href, index) {
+        io.emit("hrefsDownloaded", {hrefs: href, index})
+    }
 
     function headlines(headline, index) {
         io.emit("headlinesDownloaded", { headlines: headline, index})

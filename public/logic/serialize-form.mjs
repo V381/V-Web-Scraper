@@ -1,5 +1,9 @@
 import { getImages } from "./get-images.mjs";
 import { getHeadlines } from "./get-headlines.mjs";
+import { getHrefs } from "./get-hrefs.mjs";
+import { getLi } from "./get-li.mjs";
+import { getParagraphs } from "./get-p.mjs";
+
 
 export function serialzeForm() {
     const form = document.getElementById('scraperForm');
@@ -29,5 +33,8 @@ export function serialzeForm() {
         });
         getImages();
         getHeadlines();
+        getHrefs();
+        getLi();
+        getParagraphs();
     });
 }
