@@ -11,7 +11,6 @@ export function serialzeForm() {
         const data = {
             url,
             selector,
-            headline,
         };
     
         fetch('/data-to-scrape', {
