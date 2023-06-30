@@ -1,4 +1,58 @@
+
+@import url(_variables.css);
+@import url("_reset.css");
+
 body {
-    margin: 0;
-    padding: 0;
+    background-color: var(--main-bg-color);
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin-top: 10px;
+}
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  h1::first-letter {
+    color: red;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ffffff;
+    background-color: #333333;
+    color: #ffffff;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: darkred;
+    color: #ffffff;
+    border: none;
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  button:hover {
+    cursor: pointer;
   }
