@@ -2,7 +2,29 @@
 <html>
 <head>
   <title>V Scraper - Web Scraper</title>
+  <link type="text/css" rel="stylesheet" href="css.css">
 </head>
 <body>
+  <header>
+    <h1>V Scraper - Web Scraper</h1>
+  </header>
+  <main class="container">
+    <form id="scraperForm">
+      <label for="urlInput">URL:</label>
+      <input type="text" id="urlInput" name="urlInput" placeholder="Enter the URL to scrape" required>
+      
+      <label for="selectorInput">Selector:</label>
+      <input type="text" id="selectorInput" name="selectorInput" placeholder="Enter the CSS selector for the data to scrape" required>
+      
+      <label for="headlineInput">Headline:</label>
+      <input type="text" id="headlineInput" name="headlineInput" placeholder="Enter the headline for the scraped data" required>
+      
+      <div class="center">
+        <button type="submit">Scrape</button>
+      </div>
+    </form>
+</main>
+
+  <script src="main.mjs"></script>
 </body>
 </html>
