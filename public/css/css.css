@@ -51,6 +51,7 @@ body {
     border: none;
     width: 50%;
     margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   button:hover {
@@ -60,4 +61,12 @@ body {
   .items > * {
     width: 100%;
     display: block;
+  }
+
+  .help-section h2 {
+    text-align: center;
+  }
+
+  .help-section {
+    margin-bottom: 20px;
   }
