@@ -1,5 +1,5 @@
-import { serialzeForm } from "./serialize-form.mjs";
+import { serializeForm } from "./serialize-form.mjs";
 
 (() => {
-    serialzeForm();
+    serializeForm();
 })();
